@@ -6,3 +6,4 @@ export 'network/module.dart';
 export 'usecases/module.dart';
 export 'extensions/module.dart';
 export 'exceptions/module.dart';
+export 'error/module.dart';

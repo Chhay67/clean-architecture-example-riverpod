@@ -1,13 +1,29 @@
+import 'package:clean_architecture_riverpod/feature/product/presentation/page/product_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/network/dio_http_client.dart';
+
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+
+  @override
+  void initState() {
+    BaseHttpClient.init();
+    super.initState();
+  }
 
   // This widget is the root of your application.
   @override
@@ -34,7 +50,7 @@ class MyApp extends StatelessWidget {
             // is not restarted.
             primarySwatch: Colors.blue,
           ),
-          home: const MyHomePage(title: 'Flutter Demo Home Page'),
+          home: const ProductPage(),
         );
       },
     );
