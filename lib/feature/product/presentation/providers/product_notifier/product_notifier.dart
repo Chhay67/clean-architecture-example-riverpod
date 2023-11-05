@@ -1,8 +1,8 @@
-import 'package:clean_architecture_riverpod/core/core.dart';
-import 'package:clean_architecture_riverpod/core/enums/enums.dart';
-import 'package:clean_architecture_riverpod/feature/product/domain/usecase/module.dart';
 import 'package:clean_architecture_riverpod/feature/product/presentation/providers/product_notifier/product_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../../../core/core.dart';
+import '../../../domain/usecase/module.dart';
+
 
 final productProvider = AutoDisposeNotifierProvider<ProductNotifier,ProductState>(() => ProductNotifier());
 

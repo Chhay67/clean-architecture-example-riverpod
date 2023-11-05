@@ -7,3 +7,6 @@ export 'usecases/module.dart';
 export 'extensions/module.dart';
 export 'exceptions/module.dart';
 export 'error/module.dart';
+export 'local_storage/module.dart';
+export 'enums/module.dart';
+export 'widgets/module.dart';
