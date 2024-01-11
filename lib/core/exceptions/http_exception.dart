@@ -11,19 +11,28 @@ class DioErrorException extends BaseHttpException {
   }
 }
 
-class ServerErrorException extends BaseHttpException {
+// class ServerErrorException extends BaseHttpException {
+//   final String message;
+//   ServerErrorException(this.message);
+//
+//   @override
+//   String toString() {
+//     return message;
+//   }
+// }
+
+class ServerResponseException extends BaseHttpException {
   final String message;
-  ServerErrorException(this.message);
+  ServerResponseException(this.message);
 
   @override
   String toString() {
     return message;
   }
 }
-
-class ServerResponseException extends BaseHttpException {
+class OnTypeErrorException extends BaseHttpException {
   final String message;
-  ServerResponseException(this.message);
+  OnTypeErrorException(this.message);
 
   @override
   String toString() {

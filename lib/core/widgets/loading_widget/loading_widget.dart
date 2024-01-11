@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import '../../theme/app_color.dart';
 import 'circular_progress_indicator.dart';
 
@@ -12,7 +13,7 @@ class LoadingWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children:  [
-          LoadingIndicator(color: AppColors.solidPrimary)
+          LoadingIndicator(color: Colors.red)
         ],
       ),
     );

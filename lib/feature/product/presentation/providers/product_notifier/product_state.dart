@@ -1,30 +1,32 @@
+import 'package:clean_architecture_riverpod/feature/product/domain/entity/product.dart';
+
 import '../../../../../core/enums/enums.dart';
 import '../../../data/models/product_model.dart';
-// abstract class ProductState {}
+abstract class ProductState {
+  const ProductState();
+}
 
 
-class ProductState {
+class FailureProductState extends ProductState{
+  String errorMessage;
+  FailureProductState({required this.errorMessage});
+}
 
-  final List<ProductModel> products;
-  final LoadingState loadingState;
-  final String errorMsg;
-  bool get refreshError => errorMsg != '';
+class LoadingProductState extends ProductState{}
 
-  ProductState({
+class SuccessProductState extends ProductState{
+  final List<ProductEntity> products;
+
+  SuccessProductState({
     this.products = const [],
-    this.loadingState = LoadingState.progress,
-    this.errorMsg = '',
 });
 
-  ProductState copyWith({
-    List<ProductModel>? products,
-    LoadingState? loadingState,
-    String? errorMsg,
-}){
-    return ProductState(
-      products: products ?? this.products,
-      loadingState: loadingState ?? this.loadingState,
-      errorMsg: errorMsg ?? this.errorMsg
+  SuccessProductState copyWith({
+    List<ProductEntity>? products,
+  }){
+    return SuccessProductState(
+        products: products ?? this.products,
     );
   }
 }
+

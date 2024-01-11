@@ -4,6 +4,6 @@ class AppConfig{
   AppConfig._();
   static String BASE_URL = "https://fakestoreapi.com/";
 
-
+  static String AUTH_URL = '';
 
 }

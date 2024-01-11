@@ -85,10 +85,10 @@ class BaseApiService {
   }
 }
 
-String _onTypeError(dynamic exception) {
+OnTypeErrorException _onTypeError(dynamic exception) {
   ///Logic or syntax error on some condition
   errorLog("Type Error :=> ${exception.toString()}\nStackTrace:  ${exception.stackTrace.toString()}");
-  return ErrorMessage.SOMETHING_WRONG;
+  return OnTypeErrorException(ErrorMessage.SOMETHING_WRONG);
 }
 
 //

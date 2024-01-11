@@ -1,6 +1,5 @@
-import 'package:clean_architecture_riverpod/feature/product/data/models/product_model.dart';
+import '../entity/product.dart';
 
 abstract class ProductRepository{
-
-  Future<List<ProductModel>> getAllProducts();
+  Future<List<ProductEntity>> getAllProducts();
  }

@@ -30,27 +30,7 @@ class BaseHttpClient {
 
 }
 
-// class RentalV2ApiClient {
-//   static late final Dio dio;
-//   static void init() {
-//     final BaseOptions options = BaseOptions(
-//       baseUrl: AppConfig.BASE_URL,
-//       connectTimeout: const Duration(minutes: 1),
-//       receiveTimeout: const Duration(minutes: 1),
-//     );
-//
-//     dio = Dio()
-//       ..options = options
-//       ..interceptors.add(PrettyDioLogger(
-//         requestHeader: true,
-//         requestBody: true,
-//         responseBody: true,
-//         responseHeader: false,
-//         compact: false,
-//         error: true,
-//       ));
-//   }
-// }
+
 
 const JsonDecoder decoder = JsonDecoder();
 const JsonEncoder encoder = JsonEncoder.withIndent('  ');
